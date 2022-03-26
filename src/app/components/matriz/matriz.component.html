@@ -1,1 +1,36 @@
-<p>matriz works!</p>
+<form [formGroup]="userForm">
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>DOB</th>
+    </thead>
+    <tbody formArrayName="users" *ngFor="let group of getFormData.controls; let i=index">
+      <tr [formGroupName]="i">
+        <td class="form-group">
+          <input type="text" class="form-control" formControlName="name" placeholder="name">
+        </td>
+        <td class="form-group">
+          <input type="text" class="form-control" formControlName="email" placeholder="email">
+        </td>
+        <td class="form-group">
+          <input type="text" class="form-control" formControlName="mobNumber" placeholder="mobile number">
+        </td>
+        <td>
+          <input formControlName="dob" matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </td>
+        <td>
+          <button (click)="remove(i)" class="btn btn-primary mr-5">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<button (click)="addUser()" class="btn btn-primary mr-5">Add new</button>
+<button (click)="save()" [disabled]="userForm.invalid" class="btn btn-primary">Save</button>
+<div>
+  <!-- {{userForm.value | json}} -->
+</div>
