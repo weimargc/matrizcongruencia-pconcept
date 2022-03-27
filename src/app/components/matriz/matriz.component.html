@@ -1,3 +1,74 @@
+<form [formGroup]="matrizForm">
+<table>
+  <thead>
+    <tr>
+      <th scope="col" style="border: 1px solid red !important" *ngFor="let filPri of matrizCongruencia.filaPrincipal; let ix=index">{{filPri.columnaTitulo}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid red !important" *ngFor="let filPrigru of matrizCongruencia.filaPrincipal; let x=index" >
+        <tr>
+          <td style="border: 1px solid red !important" *ngFor="let gru of filPrigru.gruposColumna; let yx=index">{{gru.titulo}}</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid red !important" *ngFor="let gru of filPrigru.gruposColumna; let yx=index">
+            <textarea *ngIf="gru.texto!==''" [value]="gru.texto"></textarea></td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid red !important" *ngFor="let gru of filPrigru.gruposColumna; let yx=index">
+            <input *ngIf="(gru.textoChequeo === 'true' || gru.textoChequeo === 'false')"  type="checkbox" [value]="gru.textoChequeo == 'true'? true : false" [checked]="gru.textoChequeo == 'true'? true : false">
+            <textarea *ngIf="!(gru.textoChequeo === 'true' || gru.textoChequeo === 'false')" [value]="gru.textoChequeo"></textarea>
+            <!-- <input  type="checkbox" [value]="gru.textoChequeo">  -->
+          </td>
+        </tr>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<form>
+
+<form [formGroup]="matrizForm">
+	<!-- X -->
+	<div formArrayName="filaPrincipal">
+		<div *ngFor="let filPri of matrizForm['controls'].filaPrincipal['controls']; let ix=index">
+			<div formGroupName="{{ix}}" class="Xs">
+				<input type="text" formControlName="tituloPerfilGraduado">
+        <input type="text" formControlName="DescripcionPerfilGraduado">
+				<!-- <p>{{ formErrors.Xs[ix].X }}</p> -->
+				<!-- Y -->
+				<div formArrayName="filaCompetenciasGraduado">
+					<div *ngFor="let filCompet of filPri['controls'].filaCompetenciasGraduado['controls']; let iy=index">
+						<div formGroupName="{{iy}}" class="Ys">
+							<input type="text" formControlName="tituloPerfilGraduado">
+
+							<!-- Z -->
+							<!-- <div formArrayName="Zs">
+								<div *ngFor="let Z of Y['controls'].Zs['controls']; let iz=index">
+									<div formGroupName="{{iz}}" class="Zs">
+										<input type="text" formControlName="Z">
+										<p>{{ formErrors.Xs[ix].Ys[iy].Zs[iz].Z }}</p>
+									</div>
+								</div>
+								<input type="button" (click)="addZ(ix,iy)" value="Add Z">
+							</div> -->
+							<!-- Z End -->
+
+						</div>
+					</div>
+					<!-- <input type="button" (click)="addY(ix)" value="Add Y"> -->
+				</div>
+				<!-- Y End-->
+			</div>
+		</div>
+		<!-- <input type="button" (click)="addX()" value="Add X"> -->
+	</div>
+	<!-- X End -->
+	<form>
+
+		<h5>Field Values</h5>
+		<pre style="font-size:15px">{{ matrizForm.value | json }}</pre>
+
 <form [formGroup]="userForm">
   <table class="table">
     <thead>
