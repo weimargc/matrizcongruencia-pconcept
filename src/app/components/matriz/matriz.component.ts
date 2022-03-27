@@ -250,47 +250,27 @@ export class MatrizComponent implements OnInit {
          [
           {
             titulo: 'UNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            texto: 'INTRODUCCIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'true'
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
+            texto: ' INTRODUCCIÓNAplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
             textoChequeo:'false'
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            texto: 'INTRODUCCIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'false'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            titulo: 'UNIDAD DE ESTUDIO 4- Basic Business English I- 5 crds',
+            texto: 'INTRODUCCIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'true'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
-            textoChequeo:'true'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            titulo: 'UNIDAD DE ESTUDIO 5- Fundamentos de Lingüística Organizacional- 3 crds',
+            texto: 'INTRODUCCIÓN Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
             textoChequeo:'false'
           },
          ]
@@ -300,49 +280,24 @@ export class MatrizComponent implements OnInit {
         gruposColumna:
          [
           {
-            titulo: 'UNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            titulo: 'UNIDAD DE ESTUDIO 6- Basic Business English I- 5 crds',
+            texto: 'CONSTRUCCIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'true'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
+            titulo: 'UNIDAD DE ESTUDIO 7- Fundamentos de Lingüística Organizacional- 3 crds',
             texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
             textoChequeo:'false'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
+            titulo: 'UNIDAD DE ESTUDIO 8- Basic Business English II-5 crds',
             texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'false'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
+            titulo: 'UNIDAD DE ESTUDIO 9- Basic Business English I- 5 crds',
             texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'true'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'uNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
-            textoChequeo:'true'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
-            textoChequeo:'false'
           },
          ]
        },
@@ -351,48 +306,28 @@ export class MatrizComponent implements OnInit {
         gruposColumna:
          [
           {
-            titulo: 'uNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            titulo: 'UNIDAD DE ESTUDIO 10- Basic Business English I- 5 crds',
+            texto: 'APROBACIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'true'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
+            titulo: 'UNIDAD DE ESTUDIO 11- Fundamentos de Lingüística Organizacional- 3 crds',
             texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
             textoChequeo:'false'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
+            titulo: 'UNIDAD DE ESTUDIO 12- Basic Business English II-5 crds',
             texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'false'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
+            titulo: 'UNIDAD DE ESTUDIO 13- Basic Business English I- 5 crds',
             texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'true'
           },
           {
-            titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
+            titulo: 'UNIDAD DE ESTUDIO 14- Fundamentos de Lingüística Organizacional- 3 crds',
             texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
-            textoChequeo:'true'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 2- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
-            textoChequeo:'false'
-          },
-          {
-            titulo: 'UNIDAD DE ESTUDIO 3- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'false'
           },
          ]
@@ -426,30 +361,36 @@ export class MatrizComponent implements OnInit {
         columnaTitulo: [comp.columnaTitulo,],
         gruposColumna: this.fb.array([])
       });
+      this.initFilaCompetencias();
       control.push(grp);
     }
-    this.initFilaCompetencias();
   }
 
 
 
   initFilaCompetencias() {
-    const controlc = <FormArray>this.matrizForm.get('filaPrincipal').controls;
+    //console.log('compo',compo);
+    const formfilaPrincipal = <FormArray>this.matrizForm.get('filaPrincipal');
+    console.log('formfilaPrincipal',formfilaPrincipal);
+    const controlc = <FormArray>formfilaPrincipal;
     console.log('competencias',controlc);
     console.log('this.matrizForm',this.matrizForm);
     console.log('this.matrizCongruencia',this.matrizCongruencia);
     console.log('this.matrizCongruencia.filaPrincipal',this.matrizCongruencia.filaPrincipal);
     console.log('matrizCongruencia.filaPrincipal[0].gruposColumna',this.matrizCongruencia.filaPrincipal[0].gruposColumna);
 
-
-    for (const colGrupo of this.matrizCongruencia.filaPrincipal[0].gruposColumna) {
-      const grp = this.fb.group({
-        columnaTitulo: [colGrupo.titulo,],
-        gruposColumna: this.fb.array([])
+    for (const element of this.matrizCongruencia.filaPrincipal) {
+      element.gruposColumna.forEach(element => {
+        const grp = this.fb.group({
+          titulo: [element.titulo,],
+          texto: [element.texto,],
+          textoChequeo: [element.textoChequeo,]
+        });
+        controlc.push(grp)
       });
-      //this.initGruposColumna()
-      controlc.push(grp);
+;
     }
+      console.log('competencias',controlc);
   }
 
   initGruposColumna() {

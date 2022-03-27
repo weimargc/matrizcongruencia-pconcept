@@ -1,4 +1,34 @@
 <form [formGroup]="matrizForm">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col" style="border: 1px solid red !important" *ngFor="let filPri of matrizCongruencia.filaPrincipal; let ix=index">{{filPri.columnaTitulo}}</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr formArrayName="filaPrincipal">
+        <td [formGroupName]="x"  style="border: 1px solid red !important" *ngFor="let filPrigru of matrizCongruencia.filaPrincipal; let x=index">
+          <tr>
+            <td style="border: 1px solid red !important" *ngFor="let gru of filPrigru.gruposColumna; let yx=index">{{gru.titulo}}</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid red !important" *ngFor="let gru of filPrigru.gruposColumna; let yx=index">
+              <textarea *ngIf="gru.texto!==''" [value]="gru.texto" formControlName="texto"></textarea></td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid red !important" *ngFor="let gru of filPrigru.gruposColumna; let yx=index">
+              <input formControlName="textoChequeo" *ngIf="(gru.textoChequeo === 'true' || gru.textoChequeo === 'false')"  type="checkbox" [value]="gru.textoChequeo == 'true'? true : false" [checked]="gru.textoChequeo == 'true'? true : false">
+              <textarea formControlName="textoChequeo" *ngIf="!(gru.textoChequeo === 'true' || gru.textoChequeo === 'false')" [value]="gru.textoChequeo"></textarea>
+              <!-- <input  type="checkbox" [value]="gru.textoChequeo">  -->
+            </td>
+          </tr>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <form>
+
+<form [formGroup]="matrizForm" *ngIf="false">
 <table>
   <thead>
     <tr>
@@ -28,7 +58,7 @@
 </table>
 <form>
 
-<form [formGroup]="matrizForm">
+<form [formGroup]="matrizForm" *ngIf="false">
 	<!-- X -->
 	<div formArrayName="filaPrincipal">
 		<div *ngFor="let filPri of matrizForm['controls'].filaPrincipal['controls']; let ix=index">
