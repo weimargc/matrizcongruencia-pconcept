@@ -1,0 +1,125 @@
+<div class="alert alert-secondary" role="alert">
+ Matriz de congruencia
+</div>
+
+<div class="container">
+
+  <p>
+    <ngb-alert>
+      Matriz de congruencia
+    </ngb-alert>
+  </p>
+
+  <form [formGroup]="matrizForm">
+
+  <div class="scroll">
+  <table class="table table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th [colSpan]="2"></th>
+        <th *ngFor="let fila of matriz.filas[0].unidades let i=index">{{fila.valor}}</th>
+        <!-- <th [colSpan] = "matriz.filas[0].unidades.length" scope="col" class="text-center">Intro</th> -->
+      </tr>
+      <tr>
+    </thead>
+    <tbody formArrayName="filas" *ngFor="let filaM of matrizFormArr.controls; let i=index">
+      <tr *ngIf="i==1" [formGroupName]="i">
+        <td class="form-group">{{filaM.value.competencia}}</td>
+        <td class="form-group">{{filaM.value.resultado}}</td>
+        <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group">
+           <span [formGroupName]="j">
+              <span>{{valor.value.valor}}</span>
+           </span>
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr *ngIf="i==2" [formGroupName]="i">
+        <td class="form-group">{{filaM.value.competencia}}</td>
+        <td class="form-group">{{filaM.value.resultado}}</td>
+        <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group">
+           <span [formGroupName]="j">
+              <textarea  class="form-control" formControlName="valor" [value]="valor.value.valor" style="font-size: 0.8rem !important;"></textarea>
+           </span>
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr *ngIf="i>2" [formGroupName]="i">
+        <td class="form-group"><input class="form-control" type="text" formControlName="competencia" [value]="filaM" /></td>
+        <td class="form-group"><input class="form-control" type="text" formControlName="resultado" [value]="filaM" /></td>
+        <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group text-center">
+           <span [formGroupName]="j">
+            <!-- <span (click)="test(valor)">{{valor.value.valor}}</span> -->
+            <!-- <input type="checkbox" formControlName="valor"
+                [checked]="valor.value.valor === 'true' ? true : false" [value]="valor.value.valor === 'true' ? true : false"
+                 (ngModelChange)="test($event)"> -->
+                 <!-- <label  for="{{j}}"> -->
+              <input class="form-check-input"  type="checkbox" formControlName="valorCheck" id="{{j}}" style="margin-top: 8px;">
+              <!-- <mat-icon style="color: gray;" *ngIf="!valor.value.valorCheck">crop_square</mat-icon>
+              <mat-icon style="color: green;" *ngIf="valor.value.valorCheck">check_circle</mat-icon> -->
+            <!-- </label> -->
+
+            <!-- <span style="color: gray;"><mat-icon>select_all</mat-icon></span><span style="color: gray;"><mat-icon>check_circle_outline</mat-icon></span><span style="color: green;"><mat-icon>check_circle</mat-icon></span> -->
+            <!-- <input formControlName="valor" *ngIf="(valor.value.valor === 'true' || valor.value.valor === 'false')"  type="checkbox" [value]="valor.value.valor === 'true'? true : false" [checked]="valor.value.valor === 'true'? true : false" (ngModelChange)="test($event)"> -->
+            <!-- <textarea formControlName="valor" *ngIf="!(valor.value.valor === 'true' || valor.value.valor === 'false')" [value]="valor.value.valor"></textarea> -->
+              <!-- <input *ngIf="valor.value.valor === 'CHK'" type="checkbox" class="form-check-input" formControlName="valor" [value]="valor.value.valor">
+              <input *ngIf="valor.value.valor === 'UCHK'" type="checkbox" class="form-check-input" formControlName="valor" [value]="valor.value.valor"> -->
+           </span>
+        </td>
+        <td>
+          <button *ngIf="i>3" (click)="borrarCompetencia(i)" class="btn btn-primary mr-5">Quitar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</form>
+<br>
+<button (click)="agregarFila()" class="btn btn-primary me-5 mb-5">Agregar Competencia</button>
+<button (click)="guardarMatriz()" class="btn btn-primary mb-5">Guardar</button>
+
+<div *ngIf="isSave">
+  {{matrizForm.value | json}}
+ </div>
+  </div>
+
+
+
+
+<div class="container" *ngIf="false">
+<button (click)="agregarFila()">agregar Fila</button><br><br>
+<form [formGroup]="matrizForm">
+  <div formArrayName="filas">
+    <div *ngFor="let fila of matrizFormArr.controls; let i=index">
+    <fieldset>
+      <legend><h3>Fila {{i+1}}: </h3></legend>
+      <div [formGroupName]="i">
+        <label>Competencia: </label>
+        <input formControlName="competencia" /><span><button (click)="borrarCompetencia(i)">Delete competencia</button></span>
+        <input formControlName="resultado" /><span><button (click)="borrarCompetencia(i)">Delete competencia</button></span>
+        <div formArrayName="unidades">
+          <div *ngFor="let valor of fila.get('unidades')['controls']; let j=index">
+            <fieldset>
+            <legend><h4>Unidades {{j+1}}</h4></legend>
+            <div [formGroupName]="j">
+              <label>Valor unidad:</label>
+              <input formControlName="valor" /><span><button (click)="borrarUnidad(fila.get('unidades'), j)">Delete undad</button></span>
+            </div>
+            </fieldset>
+          </div>
+          <button (click)="agregarUnidad(fila.get('unidades'))">Agregar Unidad</button>
+        </div>
+      </div>
+    </fieldset>
+    </div>
+  </div><br>
+
+  <pre>{{matrizForm.value | json}}</pre>
+
+</form>
+<br>
+
+</div>

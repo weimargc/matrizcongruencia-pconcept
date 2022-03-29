@@ -235,12 +235,12 @@ export class MatrizComponent implements OnInit {
           {
             titulo: 'COMPETENCIAS DEL GRADUADO',
             texto: '',
-            textoChequeo: 'Se comunica de manera efectiva en español y de acuerdo con el nivel alcanzado en inglés y otras lenguas extranjeras (alemán, francés, italiano, portugués)  en diversos contextos culturales  y organizacionales .'
+            textoChequeo: 'COMPETENCIAS DEL GRADUADO Se comunica de manera efectiva en español y de acuerdo con el nivel alcanzado en inglés y otras lenguas extranjeras (alemán, francés, italiano, portugués)  en diversos contextos culturales  y organizacionales .'
           },
           {
             titulo: 'RESULTADO DE APRENDIZAJE',
             texto: '',
-            textoChequeo: 'Se comunica de manera efectiva en español y de acuerdo con el nivel alcanzado en inglés y otras lenguas extranjeras (alemán, francés, italiano, portugués)  en diversos contextos culturales  y organizacionales.'
+            textoChequeo: 'RESULTADO DE APRENDIZAJE Se comunica de manera efectiva en español y de acuerdo con el nivel alcanzado en inglés y otras lenguas extranjeras (alemán, francés, italiano, portugués)  en diversos contextos culturales  y organizacionales.'
           }
          ]
        },
@@ -286,17 +286,17 @@ export class MatrizComponent implements OnInit {
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 7- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
+            texto: 'CONSTRUCCIÓN Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
             textoChequeo:'false'
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 8- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            texto: 'CONSTRUCCIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'false'
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 9- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            texto: 'CONSTRUCCIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'true'
           },
          ]
@@ -312,22 +312,22 @@ export class MatrizComponent implements OnInit {
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 11- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
+            texto: 'APROBACIÓN Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
             textoChequeo:'false'
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 12- Basic Business English II-5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            texto: 'APROBACIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A2 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'false'
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 13- Basic Business English I- 5 crds',
-            texto: 'Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
+            texto: 'APROBACIÓN Demuestra dominio de manera proficiente del idioma inglés bajo los estandáres del MCER con un alcance de A1 en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita en contextos socioculturales, organizacionales y tecnológicos de carácter formal e informal dentro de un marco ético-humanístico e investigativo  y sostenible.',
             textoChequeo:'true'
           },
           {
             titulo: 'UNIDAD DE ESTUDIO 14- Fundamentos de Lingüística Organizacional- 3 crds',
-            texto: 'Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
+            texto: 'APROBACIÓN Aplica el conocimiento de la lingüística y sus niveles de estudio para el análisis de los procesos comunicativos en las organizaciones.',
             textoChequeo:'false'
           },
          ]
@@ -335,8 +335,59 @@ export class MatrizComponent implements OnInit {
     ]
   };
 
+  matrizCongruenciaBasica = {
+    fila : [
+      {
+        competencia:"GENERAL",
+        resultado:"GENERAL",
+        undades:[
+          {
+            valor:"INTRODUCCIÓN"
+          },
+          {
+            valor:"INTRODUCCIÓN"
+          },
+          {
+            valor:"INTRODUCCIÓN"
+          }
+        ]
+      },
+      {
+        competencia:"COMPETENCIAS DEL GRADUADO",
+        resultado:"RESULTADO DE APRENDIZAJE",
+        undades:[
+          {
+            valor:"UNIDAD DE ESTUDIO 1- Basic Business English I- 5 crds"
+          },
+          {
+            valor:"UNIDAD DE ESTUDIO 2- Basic Business English I- 5 crds"
+          },
+          {
+            valor:"UNIDAD DE ESTUDIO 3- Basic Business English I- 5 crds"
+          }
+        ]
+      },
+      {
+        competencia:"Se comunica de manera efectiva en español y de acuerdo con el nivel alcanzado en inglés y otras lenguas extranjeras (alemán, francés, italiano, portugués)  en diversos contextos culturales  y organizacionales . ",
+        resultado:"Demuestra dominio proficiente de las lenguas extranjeras impartidas en el programa,  bajo los estandáres del MCER con el alcance pleno establecido para cada nivel de inglés (B2)  y otras lenguas extranjeras (B1 en alemán, francés, italiano, portugués)  en las habilidades de comprensión auditiva, producción oral, comprensión lectora y producción escrita, en diversos contextos culturales y de la vida cotidiana, así como en  ámbitos profesionales.",
+        undades:[
+          {
+            valor:"true"
+          },
+          {
+            valor:"false"
+          },
+          {
+            valor:"false"
+          }
+        ]
+      }
+    ]
+  };
+
   userForm: any;
   matrizForm:any;
+  matrixForm: any;
   constructor(private fb: FormBuilder) {
   }
 
@@ -348,6 +399,12 @@ export class MatrizComponent implements OnInit {
     });
     this.userForm = this.fb.group({
       users: this.fb.array([])
+    });
+
+    this.matrixForm = this.fb.group({
+      // facultad:[''],
+      // programa:[''],
+      filaPrincipal: this.fb.array([])
     });
     this.getEmployee();
     this.initFilaPrincipal()
