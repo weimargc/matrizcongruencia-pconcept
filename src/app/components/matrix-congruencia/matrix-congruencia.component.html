@@ -13,20 +13,24 @@
   <form [formGroup]="matrizForm">
 
   <div class="scroll">
-  <table class="table table-bordered table-responsive">
+  <table class="table-bordered table-responsive">
     <thead>
       <tr>
-        <th [colSpan]="2"></th>
-        <th *ngFor="let fila of matriz.filas[0].unidades let i=index">{{fila.valor}}</th>
+        <th [colSpan]="2" style="width: 300px;"></th>
+        <th [colSpan]="0" class="form-group text-center" *ngFor="let fila of matriz.filas[0].unidades let i=index" style="width: 300px;">
+          {{fila.valor}}
+        </th>
+        <!-- <th [colSpan]="fila.valor == 'CONSTRUCCIÓN' ? columnasConstruccion:0" *ngFor="let fila of matriz.filas[0].unidades let i=index" style="width: 300px;">{{fila.valor}}</th>
+        <th [colSpan]="fila.valor == 'APROBACIÓN' ? columnasAprobacion:0" *ngFor="let fila of matriz.filas[0].unidades let i=index" style="width: 300px;">{{fila.valor}}</th> -->
         <!-- <th [colSpan] = "matriz.filas[0].unidades.length" scope="col" class="text-center">Intro</th> -->
       </tr>
       <tr>
     </thead>
     <tbody formArrayName="filas" *ngFor="let filaM of matrizFormArr.controls; let i=index">
       <tr *ngIf="i==1" [formGroupName]="i">
-        <td class="form-group">{{filaM.value.competencia}}</td>
-        <td class="form-group">{{filaM.value.resultado}}</td>
-        <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group">
+        <td class="form-group text-center"><span>{{filaM.value.competencia}}</span></td>
+        <td class="form-group text-center"><span>{{filaM.value.resultado}}</span></td>
+        <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group text-center">
            <span [formGroupName]="j">
               <span>{{valor.value.valor}}</span>
            </span>
@@ -40,7 +44,10 @@
         <td class="form-group">{{filaM.value.resultado}}</td>
         <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group">
            <span [formGroupName]="j">
-              <textarea  class="form-control" formControlName="valor" [value]="valor.value.valor" style="font-size: 0.8rem !important;"></textarea>
+              <textarea *ngIf="disableInputTxtUnidad"  class="form-control" formControlName="valor" [attr.readonly]="disableInputTxtUnidad" (click)="habilitarInput('unidades',i,j,false)"
+                [value]="valor.value.valor" style="font-size: 0.8rem !important;" ></textarea>
+                <textarea *ngIf="!disableInputTxtUnidad"  class="form-control" formControlName="valor" (blur)="disableInputTxtUnidad=true"
+                [value]="valor.value.valor" style="font-size: 0.8rem !important;" ></textarea>
            </span>
         </td>
         <td>
@@ -48,8 +55,10 @@
         </td>
       </tr>
       <tr *ngIf="i>2" [formGroupName]="i">
-        <td class="form-group"><input class="form-control" type="text" formControlName="competencia" [value]="filaM" /></td>
-        <td class="form-group"><input class="form-control" type="text" formControlName="resultado" [value]="filaM" /></td>
+        <td *ngIf="disableInput" class="form-group"><input class="form-control" type="text" formControlName="competencia"  [attr.readonly]="disableInput" (click)="habilitarInput('competencia',i,null,true);" /></td>
+        <td *ngIf="!disableInput" class="form-group"><input class="form-control" type="text" formControlName="competencia"  (blur)="disableInput=true" /></td>
+        <td *ngIf="disableInputResultado" class="form-group"><input class="form-control" type="text" formControlName="resultado"  [attr.readonly]="disableInputResultado" (click)="habilitarInput('resultado',i,-1,false);disableInputResultado=false" /></td>
+        <td *ngIf="!disableInputResultado" class="form-group"><input class="form-control" type="text" formControlName="resultado" (blur)="disableInputResultado=true" /></td>
         <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group text-center">
            <span [formGroupName]="j">
             <!-- <span (click)="test(valor)">{{valor.value.valor}}</span> -->
@@ -79,11 +88,16 @@
 </form>
 <br>
 <button (click)="agregarFila()" class="btn btn-primary me-5 mb-5">Agregar Competencia</button>
-<button (click)="guardarMatriz()" class="btn btn-primary mb-5">Guardar</button>
+<button (click)="guardarMatriz();" class="btn btn-primary mb-5">Guardar</button>
 
 <div *ngIf="isSave">
-  {{matrizForm.value | json}}
- </div>
+    {{matrizForm.value | json}}
+</div>
+<pre *ngIf="isSave">
+  <code>
+    {{matrizForm.value | json}}
+  </code>
+</pre>
   </div>
 
 

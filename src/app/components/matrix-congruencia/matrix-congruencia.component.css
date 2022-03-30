@@ -1,1 +1,8 @@
 /* [type="checkbox"]{display: none;} */
+table {
+  table-layout: fixed;
+  width: 100%;
+ }
+
+ .titulos-celda{
+ }

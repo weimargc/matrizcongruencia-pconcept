@@ -44,11 +44,14 @@ const COUNTRIES: Country[] = [
 export class MatrixCongruenciaComponent implements OnInit {
   check=false;
   countries = COUNTRIES;
+  disableInput=true;
+  disableInputResultado=true;
+  disableInputTxtUnidad = true;
   matriz = {
     filas : [
       {
-        competencia:"COMP",
-        resultado:"RESULT",
+        competencia:"",
+        resultado:"",
         unidades:[
           {
             valor:"INTRODUCCIÓN",
@@ -221,6 +224,9 @@ export class MatrixCongruenciaComponent implements OnInit {
   myForm: FormGroup;
   isSave: boolean;
   marcado: boolean;
+  columnasIntroduccion: number;
+  columnasConstruccion: number;
+  columnasAprobacion: number;
   constructor(private fb: FormBuilder) {
     this.myForm = this.fb.group({
       companies: this.fb.array([])
@@ -232,9 +238,36 @@ export class MatrixCongruenciaComponent implements OnInit {
 
     this.setCompanies();
     this.setMatrizForm();
+    this.setearAnchoColumnas();
   }
 
+
   ngOnInit(): void {
+  }
+
+  setearAnchoColumnas(){
+    this.matriz.filas.forEach(x=>{
+      let ci =1;
+      let cc =1;
+      let ca =1;
+      x.unidades.forEach(y=>{
+        if(y.valor =='INTRODUCCIÓN'){
+          this.columnasIntroduccion = ci;
+          ci++;
+        }else if(y.valor =='CONSTRUCCIÓN'){
+          this.columnasConstruccion = cc;
+          cc++;
+      }else if(y.valor =='APROBACIÓN'){
+        this.columnasAprobacion = ca;
+        ca++;
+      }
+      });
+    });
+
+    console.log(this.columnasIntroduccion);
+    console.log(this.columnasConstruccion);
+    console.log(this.columnasAprobacion);
+
   }
 
   data = {
@@ -399,6 +432,61 @@ export class MatrixCongruenciaComponent implements OnInit {
 
   checkBox(check){
     this.marcado = check;
+  }
+
+  habilitarInput(nombreControl,indiceCompetencia,indiceUnidades,habilitar){
+    //this.matrizForm.controls['email_personal'].disable();
+    // let objeto = Object.values(this.matrizForm.controls).forEach(control => {
+    //   if (control instanceof FormGroup) {
+    //     Object.values(control.controls).forEach(c => c.markAsTouched());
+    //   }
+    //   else {
+    //     control.markAsTouched();
+    //   }
+    // });
+
+  //   if(nombreControl=='unidades'){
+  //     let unidadesCtrl = this.matrizFormArr.controls[indiceCompetencia].get(nombreControl)['controls'][indiceUnidades];
+  //     console.log('unidadesCtrl',unidadesCtrl);
+  //     unidadesCtrl.setValue({valor:'MOD',valorCheck:false});
+  //     unidadesCtrl.enable();
+  //     console.log('unidadesCtrlssss',unidadesCtrl);
+  //     console.log('indicecompet/indiceUnidades',indiceCompetencia,indiceUnidades);
+  //   }else{
+
+  //   console.log('control',nombreControl);
+  //   // console.log('indiceCont',indiceCompetencia);
+  //   // console.log('matrixForm',this.matrizForm);
+  //   console.log('this.matrizFormArr.controls+idex',this.matrizFormArr.controls[indiceCompetencia]);
+  //   const ctrl = this.matrizFormArr.controls[indiceCompetencia].get(nombreControl);
+  //   console.log('ctrl',ctrl);
+  //   console.log('ctrl',ctrl);
+
+  //   console.log('this.matrizForm.controls',this.matrizForm.controls);
+  //   console.log('this.matrizForm.controls',this.matrizForm.controls);
+
+  //   this.matrizFormArr.controls.forEach((fila,indice) => {
+  //     console.log('fila-indice',fila,indice);
+  //   });
+  //   console.log(habilitar,this.disableInput);
+  // }
+
+  if(nombreControl=='unidades'){
+    this.disableInputTxtUnidad=false;
+    this.disableInput = true;
+    this.disableInputResultado=true;
+  }
+  else if(nombreControl=='competencia'){
+    this.disableInputTxtUnidad=true;
+    this.disableInput = false;
+    this.disableInputResultado=true;
+  }
+  else if(nombreControl=='resultado'){
+    this.disableInputTxtUnidad=true;
+    this.disableInput = true;
+    this.disableInputResultado=false;
+  }
+
   }
 
   //
