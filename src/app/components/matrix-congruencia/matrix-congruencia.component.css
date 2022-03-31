@@ -3,6 +3,29 @@ table {
   table-layout: fixed;
   width: 100%;
  }
+ textarea{
+   font-size: 0.8rem !important;
+ }
 
  .titulos-celda{
  }
+
+ .cell-color-inroduccion{
+  background-color: green;
+  color: white;
+ }
+ .cell-color-construccion{
+  background-color: aquamarine;
+}
+.cell-color-aprobacion{
+  background-color: cornflowerblue;
+}
+
+.textarea1 {
+  resize: none;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  /* background-color: transparent; */
+  opacity: 1;
+}

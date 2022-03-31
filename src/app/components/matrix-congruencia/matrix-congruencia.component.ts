@@ -472,21 +472,37 @@ export class MatrixCongruenciaComponent implements OnInit {
   // }
 
   if(nombreControl=='unidades'){
-    this.disableInputTxtUnidad=false;
-    this.disableInput = true;
-    this.disableInputResultado=true;
+    // this.disableInputTxtUnidad=false;
+    // this.disableInput = true;
+    this.disableInputTxtUnidad=habilitar;
+    let unidadesCtrl = this.matrizFormArr.controls[indiceCompetencia].get(nombreControl)['controls'][indiceUnidades];
+  //     console.log('unidadesCtrl',unidadesCtrl);
+  if(habilitar){
+    //unidadesCtrl.setValue({valor:'DISABLE :' + indiceCompetencia +","+indiceUnidades,valorCheck:false});
+  }
+  else{
+    //unidadesCtrl.setValue({valor:'ENABLE :' + indiceCompetencia +","+indiceUnidades,valorCheck:false});
+  }
+  //     console.log('unidadesCtrlssss',unidadesCtrl);
+  //     console.log('indicecompet/indiceUnidades',indiceCompetencia,indiceUnidades);
   }
   else if(nombreControl=='competencia'){
-    this.disableInputTxtUnidad=true;
-    this.disableInput = false;
-    this.disableInputResultado=true;
+    // this.disableInputTxtUnidad=true;
+     this.disableInput = habilitar;
+    // this.disableInputResultado=true;
   }
   else if(nombreControl=='resultado'){
-    this.disableInputTxtUnidad=true;
-    this.disableInput = true;
-    this.disableInputResultado=false;
+    // this.disableInputTxtUnidad=true;
+    // this.disableInput = true;
+    this.disableInputResultado=habilitar;
   }
 
+  }
+
+  deshabilitarInput(){
+    this.disableInputTxtUnidad=true;
+    this.disableInput = true;
+    this.disableInputResultado=true;
   }
 
   //

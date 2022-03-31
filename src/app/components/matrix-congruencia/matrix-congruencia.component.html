@@ -1,14 +1,9 @@
-<div class="alert alert-secondary" role="alert">
- Matriz de congruencia
-</div>
 
 <div class="container">
 
-  <p>
-    <ngb-alert>
-      Matriz de congruencia
-    </ngb-alert>
-  </p>
+  <div class="alert alert-success" role="alert">
+   Matriz de congruencia
+  </div>
 
   <form [formGroup]="matrizForm">
 
@@ -16,8 +11,8 @@
   <table class="table-bordered table-responsive">
     <thead>
       <tr>
-        <th [colSpan]="2" style="width: 300px;"></th>
-        <th [colSpan]="0" class="form-group text-center" *ngFor="let fila of matriz.filas[0].unidades let i=index" style="width: 300px;">
+        <th [colSpan]="2" style="width: 500px;"></th>
+        <th [colSpan]="0" class="form-group text-center cell-color" [ngClass]="{'cell-color-inroduccion':fila.valor=='INTRODUCCIÓN','cell-color-construccion':fila.valor=='CONSTRUCCIÓN','cell-color-aprobacion':fila.valor=='APROBACIÓN'}"  *ngFor="let fila of matriz.filas[0].unidades let i=index" style="width: 300px;">
           {{fila.valor}}
         </th>
         <!-- <th [colSpan]="fila.valor == 'CONSTRUCCIÓN' ? columnasConstruccion:0" *ngFor="let fila of matriz.filas[0].unidades let i=index" style="width: 300px;">{{fila.valor}}</th>
@@ -44,9 +39,9 @@
         <td class="form-group">{{filaM.value.resultado}}</td>
         <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group">
            <span [formGroupName]="j">
-              <textarea *ngIf="disableInputTxtUnidad"  class="form-control" formControlName="valor" [attr.readonly]="disableInputTxtUnidad" (click)="habilitarInput('unidades',i,j,false)"
-                [value]="valor.value.valor" style="font-size: 0.8rem !important;" ></textarea>
-                <textarea *ngIf="!disableInputTxtUnidad"  class="form-control" formControlName="valor" (blur)="disableInputTxtUnidad=true"
+              <textarea title="{{valor.value.valor}}" *ngIf="disableInputTxtUnidad" rows="5" class="form-control textarea1" formControlName="valor" [attr.readonly]="disableInputTxtUnidad" (click)="habilitarInput('unidades',i,j,false)"
+                [value]="valor.value.valor" ></textarea>
+                <textarea title="{{valor.value.valor}}" *ngIf="!disableInputTxtUnidad"  rows="5" class="form-control textarea1" formControlName="valor" (blur)="habilitarInput('unidades',i,j,true)"
                 [value]="valor.value.valor" style="font-size: 0.8rem !important;" ></textarea>
            </span>
         </td>
@@ -55,10 +50,10 @@
         </td>
       </tr>
       <tr *ngIf="i>2" [formGroupName]="i">
-        <td *ngIf="disableInput" class="form-group"><input class="form-control" type="text" formControlName="competencia"  [attr.readonly]="disableInput" (click)="habilitarInput('competencia',i,null,true);" /></td>
-        <td *ngIf="!disableInput" class="form-group"><input class="form-control" type="text" formControlName="competencia"  (blur)="disableInput=true" /></td>
-        <td *ngIf="disableInputResultado" class="form-group"><input class="form-control" type="text" formControlName="resultado"  [attr.readonly]="disableInputResultado" (click)="habilitarInput('resultado',i,-1,false);disableInputResultado=false" /></td>
-        <td *ngIf="!disableInputResultado" class="form-group"><input class="form-control" type="text" formControlName="resultado" (blur)="disableInputResultado=true" /></td>
+        <td *ngIf="disableInput" class="form-group"><textarea rows="5" class="form-control textarea1" type="text" formControlName="competencia"  [attr.readonly]="disableInput" (click)="habilitarInput('competencia',i,null,false);" ></textarea></td>
+        <td *ngIf="!disableInput" class="form-group"><textarea rows="5" class="form-control textarea1" type="text" formControlName="competencia"  (blur)="habilitarInput('competencia',i,null,true);" ></textarea></td>
+        <td *ngIf="disableInputResultado" class="form-group"><textarea rows="5" class="form-control textarea1" type="text" formControlName="resultado"  [attr.readonly]="disableInputResultado" (click)="habilitarInput('resultado',i,null,false);" ></textarea></td>
+        <td *ngIf="!disableInputResultado" class="form-group"><textarea rows="5" class="form-control textarea1" type="text" formControlName="resultado" (blur)="habilitarInput('resultado',i,null,true);" ></textarea></td>
         <td formArrayName="unidades" *ngFor="let valor of filaM.get('unidades')['controls']; let j=index" class="form-group text-center">
            <span [formGroupName]="j">
             <!-- <span (click)="test(valor)">{{valor.value.valor}}</span> -->
